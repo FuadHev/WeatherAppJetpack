@@ -7,7 +7,7 @@ data class HourlyForecastResponseItem(
     @SerializedName("DateTime")
     val dateTime: String,
     @SerializedName("EpochDateTime")
-    val epochDateTime: Int,
+    val epochDateTime: Long,
     @SerializedName("HasPrecipitation")
     val hasPrecipitation: Boolean,
     @SerializedName("IconPhrase")

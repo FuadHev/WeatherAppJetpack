@@ -13,11 +13,11 @@ import com.fuadhev.myweatherappjetpack.screens.WeatherScreen
 @Composable
 fun Navigation() {
     val navController = rememberNavController()
-    NavHost(navController = navController, startDestination = "home") {
+    NavHost(navController = navController, startDestination = Screen.HomeScreen.route) {
         composable("home") {
             HomeScreen(navController = navController)
         }
-        composable("weather/{location_key}/{name}/{country}", arguments = listOf(
+        composable(Screen.WeatherScreen.route+"/{location_key}/{name}/{country}", arguments = listOf(
             navArgument("location_key") {
                 type = NavType.StringType
             },

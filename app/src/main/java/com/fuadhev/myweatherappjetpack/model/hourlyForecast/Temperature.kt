@@ -9,5 +9,5 @@ data class Temperature(
     @SerializedName("UnitType")
     val unitType: Int,
     @SerializedName("Value")
-    val value: Int
+    val value: Double
 )

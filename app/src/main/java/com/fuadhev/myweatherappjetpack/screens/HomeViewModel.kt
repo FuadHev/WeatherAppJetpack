@@ -1,5 +1,6 @@
 package com.fuadhev.myweatherappjetpack.screens
 
+import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.fuadhev.myweatherappjetpack.model.BaseModel
@@ -24,7 +25,7 @@ class HomeViewModel:ViewModel(),KoinComponent {
             _locations.update { BaseModel.Loading }
             repo.searchLocation(query).also { data->
                 _locations.update { data }
-
+                Log.e("data", "searchLocation: ${data}", )
             }
 
         }
